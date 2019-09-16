@@ -1,34 +1,33 @@
-class BoardMember  {
-  constructor(name, homeState, training) {
+class BoardMember{
+  constructor(name, homeState, training){
     this.name = name
     this.homeState = homeState
     this.training = training
   }
 
-  veto() {
-    console.log("No, I must disagree")
+  veto(){
+    return "No, I must disagree"
+  }
+
+  approve(){
+    return "You can do that!"
+  }
+
+  doCharity(){
+    return "I like to help people."
+  }
+
+  releasePressStatement(){
+    return "You will see great things from Scuber."
+  }
+
+  sayHi(){
+    return `Hi, my name is ${this.name}. I am from ${this.homeState}, and I was trained in ${this.training}.`
   }
 }
 
-BoardMember.prototype.approve = function() {
-  console.log("You can do that!")
-}
-
-BoardMember.prototype.doCharity = function() {
-  console.log("I like to help people.")
-}
-
-BoardMember.prototype.releasePressStatement = function() {
-  console.log("You will see great things from Scuber.")
-}
-
-BoardMember.prototype.sayHi = function() {
-  console.log(`Hi, my name is ${this.name}. I am from ${this.homeState}, and I was trained in ${this.training}.`)
-}
-
-class Ceo extends BoardMember {
+class Ceo extends BoardMember{
   hireEmployee(){
-    super.hireEmployee()
-    console.log("Welcome aboard!")
+    return "Welcome aboard!"
   }
 }
