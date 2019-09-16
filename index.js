@@ -23,3 +23,9 @@ BoardMember.prototype.releasePressStatement = function() {
 BoardMember.prototype.sayHi = function() {
   console.log(`Hi, my name is ${this.name}. I am from ${this.homeState}, and I was trained in ${this.training}.`)
 }
+
+class Ceo extends BoardMember {
+  hireEmployee(){
+    console.log("Welcome aboard!")
+  }
+}
