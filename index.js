@@ -4,10 +4,10 @@ class BoardMember  {
     this.homeState = homeState
     this.training = training
   }
-}
 
-BoardMember.prototype.veto = function() {
-  console.log("No, I must disagree")
+  veto() {
+    console.log("No, I must disagree")
+  }
 }
 
 BoardMember.prototype.approve = function() {
